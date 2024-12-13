@@ -2,29 +2,32 @@ BootStrap: docker
 From: rocker/r-ver:4.2.3
 
 %post
-    # Install system dependencies
+    # Update and install system dependencies
     apt-get update && apt-get install -y \
         libxml2-dev libcurl4-openssl-dev libssl-dev pandoc git && \
         apt-get clean
 
-    # Install BiocManager
+    # Install BiocManager for R package management
     Rscript -e "install.packages('BiocManager')"
 
-    # Set Bioconductor version without confirmation
+    # Set Bioconductor version
     Rscript -e "BiocManager::install(version = '3.15', ask = FALSE)"
 
-    # Install R packages from libraries.txt
+    # Install R packages listed in libraries.txt
     Rscript -e "pkgs <- scan('/pipeline/libraries.txt', what = 'character', sep = ','); \
-        BiocManager::install(pkgs, force = TRUE, ask = FALSE)"
+        BiocManager::install(pkgs, ask = FALSE, dependencies = TRUE)"
 
-    # Copy pre-installed R packages
-    cp -r /pipeline/R-packages/metid /usr/local/lib/R/site-library/
-    cp -r /pipeline/R-packages/downloadthis /usr/local/lib/R/site-library/
-    cp -r /pipeline/R-packages/MetaboDiff /usr/local/lib/R/site-library/
+    # Install dependencies for custom R packages
+    Rscript -e "
+        custom_pkgs <- c('/pipeline/R-packages/metid', '/pipeline/R-packages/downloadthis', '/pipeline/R-packages/MetaboDiff');
+        for (pkg in custom_pkgs) {
+            devtools::install(pkg, dependencies = TRUE)
+        }
+    "
 
 %files
     pipeline/libraries.txt /pipeline/libraries.txt
-    R/ /pipeline/R/
+    pipeline/R/ /pipeline/R/
     pipeline/R-packages/ /pipeline/R-packages/
 
 %environment
