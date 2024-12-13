@@ -1,0 +1,31 @@
+Package: MetaboDiff
+Type: Package
+Title: An R package for differential metabolomic analysis
+Version: 0.9.5
+Author: Andreas Mock
+Maintainer: <andreas.mock@nct-heidelberg.de>
+Description: The MetaboDiff packages aims to provide a low-level entry to differential metabolomic analysis by starting off with the table of relative metabolite quantifications provided by commercial vendors or core facilities. 
+Depends: R (>= 4.0.2), SummarizedExperiment, MultiAssayExperiment,
+        ComplexHeatmap, tidyverse
+Imports: impute, vsn, cowplot, WGCNA, ape, dynamicTreeCut, plyr,
+        phytools, tsne, genefilter
+VignetteBuilder: knitr
+Suggests: BiocStyle, knitr, rmarkdown
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+biocViews:
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: MetaboDiff
+RemoteUsername: andreasmock
+RemoteRef: HEAD
+RemoteSha: 6b1e31aa7c5737e0a9acc4e74a4e98434a341c1f
+GithubRepo: MetaboDiff
+GithubUsername: andreasmock
+GithubRef: HEAD
+GithubSHA1: 6b1e31aa7c5737e0a9acc4e74a4e98434a341c1f
+NeedsCompilation: no
+Packaged: 2022-09-08 13:09:37 UTC; hkates
+Built: R 4.2.1; ; 2022-09-08 13:09:38 UTC; unix

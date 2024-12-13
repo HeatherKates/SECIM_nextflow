@@ -1,0 +1,4 @@
+download_dir            Download a directory
+download_file           Download a local file or multiple files
+download_link           Download file from a web address
+download_this           Download data frames, lists, or any R object

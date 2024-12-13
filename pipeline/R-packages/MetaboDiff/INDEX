@@ -1,0 +1,25 @@
+MOI_plot                Module of interest plot
+MS_plot                 Module significance plot
+calculate_MS            Calculate module significance
+create_mae              Create MultiAssayExperiment object for
+                        MetaboDiff
+diff_test               Perform comparative analysis using T-Test
+diss_matrix             Construct dissimilarity matrix for metabolic
+                        correlation network
+get_SMPDBanno           Annotation using Small Molecule Pathway
+                        Database (SMPDB)
+identify_modules        Identification of metabolic correlation modules
+knn_impute              Impute metabolomic data by k-nearest neighbour
+                        imputation
+na_heatmap              Heatmap to visualize missing metabolites across
+                        the samples
+name_modules            Name metabolic correlation modules
+normalize_met           Normalize metabolomic data by vsn
+outlier_heatmap         Heatmap to visualize outliers in the study set
+pca_plot                pca plot
+quality_plot            Quality plot of processing steps
+remove_cluster          Remove cluster from metabolomic data
+tsne_plot               tSNE plot
+variance_boxplot        Boxplot comparing the distribution of variance
+                        in metabolic measurements across the pathways
+volcano_plot            Volcano plot of differential analysis

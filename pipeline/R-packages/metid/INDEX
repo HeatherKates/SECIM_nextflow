@@ -1,0 +1,107 @@
+annotate_metabolites_mass_dataset
+                        Identify metabolites based on MS1 or MS/MS
+                        database
+annotate_single_peak_mass_dataset
+                        Identify metabolites based on MS1 or MS/MS
+                        database for single peak.
+colnames.databaseClass
+                        colnames
+construct_database      Construct in-house or public MS2 database for
+                        metid.
+construct_massbank_database
+                        Construct public MS2 database from massbank
+                        with msp format.
+construct_mona_database
+                        Construct public MS2 database from MoNA with
+                        msp format.
+correct_database_rt     Correct RTs of metabolites in database using
+                        internal standard list
+databaseClass-class     An S4 class to represent MS1 or MS2 database.
+filter_adducts          Filter adducts.
+filter_identification   Filter identifications according to m/z error,
+                        RT error, MS similarity and total score
+getIdentificationTable2
+                        Get identification table from a mzIdentifyClass
+                        object
+getMS2spectrum          Get MS2 spectra of peaks from databaseClass
+                        object
+get_iden_info           Get identification information from a
+                        metIdentifyClass object
+get_identification_table
+                        Get identification table from a
+                        metIdentifyClass object
+get_identification_table_all
+                        get_identification_table_all
+get_ms2_spectrum        Get MS2 spectra of peaks from databaseClass
+                        object
+get_ms2_spectrum_from_object
+                        Get spectra of peaks from metIdentifyClass
+                        object
+get_parameters          Get parameters from a metIdentifyClass object
+get_parameters_metid    Get parameters from a metIdentifyClass object
+hilic.neg               HILIC negative mode adduct table
+hilic.pos               HILIC positive mode adduct table
+identify_metabolite_all
+                        Identify metabolites using multiple databases
+                        one time
+identify_metabolites    Identify metabolites based on MS1 or MS/MS
+                        database
+identify_metabolites_params
+                        Generate the parameter list for
+                        identify_metabolites function
+identify_ms2_only       Identify metabolites based on MS/MS database
+identify_peak           Identify metabolites based on MS1 or MS/MS
+                        database
+identify_single_peak    Identify single peak based on database.
+metIdentify             Identify metabolites based on MS/MS database.
+metIdentifyClass-class
+                        An S4 class to represent annotation result.
+metIdentify_mass_dataset
+                        Identify metabolites based on MS/MS database.
+metid                   Show the base information of metid pacakge
+metid_conflicts         Conflicts between the metid and other packages
+metid_logo              Show the base information of metid pacakge
+metid_packages          List all packages in the metid
+ms2_plot_mass_dataset   Identify metabolites based on MS1 or MS/MS
+                        database for single peak.
+ms2plot                 Get MS2 match plots from a metIdentifyClass
+                        object
+msDatabase_hilic0.0.2   Michael Snyder lab RPLC database 0.0.2
+msDatabase_rplc0.0.2    Michael Snyder lab RPLC database 0.0.2
+mzIdentify              Identify peaks based on MS1 database
+mzIdentifyParam         Generate the mzIdentify parameter list
+mzIdentify_mass_dataset
+                        Identify peaks based on MS1 database
+mzIdentify_mass_dataset2
+                        Identify peaks based on MS1 database
+orbitrap_database0.0.3
+                        orbitrap_database0.0.3
+readMGF                 readMGF
+readMSP                 readMSP
+readMSP_MoNA            readMSP_MoNA
+readMZXML               readMZXML
+read_mgf_experiment     read_mgf_experiment
+read_mgf_gnps           read_mgf_gnps
+read_mgf_mona           read_mgf_mona
+read_msp                read_msp
+read_msp_database       read_msp_database
+read_msp_gnps           read_msp_gnps
+read_msp_mona           read_msp_mona
+rp.neg                  Reverse phase negative mode adduct table
+rp.pos                  Reverse phase positive mode adduct table
+snyder_database_hilic0.0.3
+                        Michael Snyder lab RPLC database
+snyder_database_rplc0.0.3
+                        Michael Snyder lab RPLC database
+summary_annotation_table
+                        Summary the annotation table
+trans_to_new_style      Transform old style identification table to new
+                        style
+which_has_identification
+                        Get the peak names which have identifications
+write_mgf_gnps          Export metid database to mgf (gnps format)
+write_mgf_massbank      Export metid database to mgf (MassBank format)
+write_mgf_mona          Export metid database to mgf (mona format)
+write_msp_gnps          Export metid database to msp (gnps format)
+write_msp_massbank      Export metid database to msp (MassBank format)
+write_msp_mona          Export metid database to msp (mona format)

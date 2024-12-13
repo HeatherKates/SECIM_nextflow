@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Metabolite identification based on MS1 and MS2 spectra</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Metabolite identification based on MS1 and MS2 spectra
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;metid&rsquo; version 1.2.25</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../NEWS">Package NEWS</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="annotate_metabolites_mass_dataset.html">annotate_metabolites_mass_dataset</a></td>
+<td>Identify metabolites based on MS1 or MS/MS database</td></tr>
+<tr><td style="width: 25%;"><a href="annotate_single_peak_mass_dataset.html">annotate_single_peak_mass_dataset</a></td>
+<td>Identify metabolites based on MS1 or MS/MS database for single peak.</td></tr>
+<tr><td style="width: 25%;"><a href="summary-databaseClass.html">colnames.databaseClass</a></td>
+<td>colnames</td></tr>
+<tr><td style="width: 25%;"><a href="construct_database.html">construct_database</a></td>
+<td>Construct in-house or public MS2 database for metid.</td></tr>
+<tr><td style="width: 25%;"><a href="construct_massbank_database.html">construct_massbank_database</a></td>
+<td>Construct public MS2 database from massbank with msp format.</td></tr>
+<tr><td style="width: 25%;"><a href="construct_mona_database.html">construct_mona_database</a></td>
+<td>Construct public MS2 database from MoNA with msp format.</td></tr>
+<tr><td style="width: 25%;"><a href="correct_database_rt.html">correct_database_rt</a></td>
+<td>Correct RTs of metabolites in database using internal standard list</td></tr>
+<tr><td style="width: 25%;"><a href="databaseClass-class.html">databaseClass-class</a></td>
+<td>An S4 class to represent MS1 or MS2 database.</td></tr>
+<tr><td style="width: 25%;"><a href="summary-databaseClass.html">dim.databaseClass</a></td>
+<td>colnames</td></tr>
+<tr><td style="width: 25%;"><a href="filter_adducts.html">filter_adducts</a></td>
+<td>Filter adducts.</td></tr>
+<tr><td style="width: 25%;"><a href="filter_identification.html">filter_identification</a></td>
+<td>Filter identifications according to m/z error, RT error, MS similarity and total score</td></tr>
+<tr><td style="width: 25%;"><a href="getIdentificationTable2.html">getIdentificationTable2</a></td>
+<td>Get identification table from a mzIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="getMS2spectrum.html">getMS2spectrum</a></td>
+<td>Get MS2 spectra of peaks from databaseClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_identification_table.html">get_identification_table</a></td>
+<td>Get identification table from a metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_identification_table_all.html">get_identification_table_all</a></td>
+<td>get_identification_table_all</td></tr>
+<tr><td style="width: 25%;"><a href="get_iden_info.html">get_iden_info</a></td>
+<td>Get identification information from a metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_ms2_spectrum.html">get_ms2_spectrum</a></td>
+<td>Get MS2 spectra of peaks from databaseClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_ms2_spectrum_from_object.html">get_ms2_spectrum_from_object</a></td>
+<td>Get spectra of peaks from metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_parameters.html">get_parameters</a></td>
+<td>Get parameters from a metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="get_parameters_metid.html">get_parameters_metid</a></td>
+<td>Get parameters from a metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="hilic.neg.html">hilic.neg</a></td>
+<td>HILIC negative mode adduct table</td></tr>
+<tr><td style="width: 25%;"><a href="hilic.pos.html">hilic.pos</a></td>
+<td>HILIC positive mode adduct table</td></tr>
+<tr><td style="width: 25%;"><a href="identify_metabolites.html">identify_metabolites</a></td>
+<td>Identify metabolites based on MS1 or MS/MS database</td></tr>
+<tr><td style="width: 25%;"><a href="identify_metabolites_params.html">identify_metabolites_params</a></td>
+<td>Generate the parameter list for identify_metabolites function</td></tr>
+<tr><td style="width: 25%;"><a href="identify_metabolite_all.html">identify_metabolite_all</a></td>
+<td>Identify metabolites using multiple databases one time</td></tr>
+<tr><td style="width: 25%;"><a href="identify_ms2_only.html">identify_ms2_only</a></td>
+<td>Identify metabolites based on MS/MS database</td></tr>
+<tr><td style="width: 25%;"><a href="identify_peak.html">identify_peak</a></td>
+<td>Identify metabolites based on MS1 or MS/MS database</td></tr>
+<tr><td style="width: 25%;"><a href="identify_single_peak.html">identify_single_peak</a></td>
+<td>Identify single peak based on database.</td></tr>
+<tr><td style="width: 25%;"><a href="metid.html">metid</a></td>
+<td>Show the base information of metid pacakge</td></tr>
+<tr><td style="width: 25%;"><a href="metIdentify.html">metIdentify</a></td>
+<td>Identify metabolites based on MS/MS database.</td></tr>
+<tr><td style="width: 25%;"><a href="metIdentifyClass-class.html">metIdentifyClass-class</a></td>
+<td>An S4 class to represent annotation result.</td></tr>
+<tr><td style="width: 25%;"><a href="metIdentify_mass_dataset.html">metIdentify_mass_dataset</a></td>
+<td>Identify metabolites based on MS/MS database.</td></tr>
+<tr><td style="width: 25%;"><a href="metid_conflicts.html">metid_conflicts</a></td>
+<td>Conflicts between the metid and other packages</td></tr>
+<tr><td style="width: 25%;"><a href="metid_logo.html">metid_logo</a></td>
+<td>Show the base information of metid pacakge</td></tr>
+<tr><td style="width: 25%;"><a href="metid_packages.html">metid_packages</a></td>
+<td>List all packages in the metid</td></tr>
+<tr><td style="width: 25%;"><a href="ms2plot.html">ms2plot</a></td>
+<td>Get MS2 match plots from a metIdentifyClass object</td></tr>
+<tr><td style="width: 25%;"><a href="ms2_plot_mass_dataset.html">ms2_plot_mass_dataset</a></td>
+<td>Identify metabolites based on MS1 or MS/MS database for single peak.</td></tr>
+<tr><td style="width: 25%;"><a href="msDatabase_hilic0.0.2.html">msDatabase_hilic0.0.2</a></td>
+<td>Michael Snyder lab RPLC database 0.0.2</td></tr>
+<tr><td style="width: 25%;"><a href="msDatabase_rplc0.0.2.html">msDatabase_rplc0.0.2</a></td>
+<td>Michael Snyder lab RPLC database 0.0.2</td></tr>
+<tr><td style="width: 25%;"><a href="mzIdentify.html">mzIdentify</a></td>
+<td>Identify peaks based on MS1 database</td></tr>
+<tr><td style="width: 25%;"><a href="mzIdentifyParam.html">mzIdentifyParam</a></td>
+<td>Generate the mzIdentify parameter list</td></tr>
+<tr><td style="width: 25%;"><a href="mzIdentify_mass_dataset.html">mzIdentify_mass_dataset</a></td>
+<td>Identify peaks based on MS1 database</td></tr>
+<tr><td style="width: 25%;"><a href="mzIdentify_mass_dataset2.html">mzIdentify_mass_dataset2</a></td>
+<td>Identify peaks based on MS1 database</td></tr>
+<tr><td style="width: 25%;"><a href="summary-databaseClass.html">ncol.databaseClass</a></td>
+<td>colnames</td></tr>
+<tr><td style="width: 25%;"><a href="summary-databaseClass.html">nrow.databaseClass</a></td>
+<td>colnames</td></tr>
+<tr><td style="width: 25%;"><a href="orbitrap_database0.0.3.html">orbitrap_database0.0.3</a></td>
+<td>orbitrap_database0.0.3</td></tr>
+<tr><td style="width: 25%;"><a href="readMGF.html">readMGF</a></td>
+<td>readMGF</td></tr>
+<tr><td style="width: 25%;"><a href="readMSP.html">readMSP</a></td>
+<td>readMSP</td></tr>
+<tr><td style="width: 25%;"><a href="readMSP_MoNA.html">readMSP_MoNA</a></td>
+<td>readMSP_MoNA</td></tr>
+<tr><td style="width: 25%;"><a href="readMZXML.html">readMZXML</a></td>
+<td>readMZXML</td></tr>
+<tr><td style="width: 25%;"><a href="read_mgf_experiment.html">read_mgf_experiment</a></td>
+<td>read_mgf_experiment</td></tr>
+<tr><td style="width: 25%;"><a href="read_mgf_gnps.html">read_mgf_gnps</a></td>
+<td>read_mgf_gnps</td></tr>
+<tr><td style="width: 25%;"><a href="read_mgf_mona.html">read_mgf_mona</a></td>
+<td>read_mgf_mona</td></tr>
+<tr><td style="width: 25%;"><a href="read_msp.html">read_msp</a></td>
+<td>read_msp</td></tr>
+<tr><td style="width: 25%;"><a href="read_msp_database.html">read_msp_database</a></td>
+<td>read_msp_database</td></tr>
+<tr><td style="width: 25%;"><a href="read_msp_gnps.html">read_msp_gnps</a></td>
+<td>read_msp_gnps</td></tr>
+<tr><td style="width: 25%;"><a href="read_msp_mona.html">read_msp_mona</a></td>
+<td>read_msp_mona</td></tr>
+<tr><td style="width: 25%;"><a href="rp.neg.html">rp.neg</a></td>
+<td>Reverse phase negative mode adduct table</td></tr>
+<tr><td style="width: 25%;"><a href="rp.pos.html">rp.pos</a></td>
+<td>Reverse phase positive mode adduct table</td></tr>
+<tr><td style="width: 25%;"><a href="snyder_database_hilic0.0.3.html">snyder_database_hilic0.0.3</a></td>
+<td>Michael Snyder lab RPLC database</td></tr>
+<tr><td style="width: 25%;"><a href="snyder_database_rplc0.0.3.html">snyder_database_rplc0.0.3</a></td>
+<td>Michael Snyder lab RPLC database</td></tr>
+<tr><td style="width: 25%;"><a href="summary_annotation_table.html">summary_annotation_table</a></td>
+<td>Summary the annotation table</td></tr>
+<tr><td style="width: 25%;"><a href="trans_to_new_style.html">trans_to_new_style</a></td>
+<td>Transform old style identification table to new style</td></tr>
+<tr><td style="width: 25%;"><a href="which_has_identification.html">which_has_identification</a></td>
+<td>Get the peak names which have identifications</td></tr>
+<tr><td style="width: 25%;"><a href="write_mgf_gnps.html">write_mgf_gnps</a></td>
+<td>Export metid database to mgf (gnps format)</td></tr>
+<tr><td style="width: 25%;"><a href="write_mgf_massbank.html">write_mgf_massbank</a></td>
+<td>Export metid database to mgf (MassBank format)</td></tr>
+<tr><td style="width: 25%;"><a href="write_mgf_mona.html">write_mgf_mona</a></td>
+<td>Export metid database to mgf (mona format)</td></tr>
+<tr><td style="width: 25%;"><a href="write_msp_gnps.html">write_msp_gnps</a></td>
+<td>Export metid database to msp (gnps format)</td></tr>
+<tr><td style="width: 25%;"><a href="write_msp_massbank.html">write_msp_massbank</a></td>
+<td>Export metid database to msp (MassBank format)</td></tr>
+<tr><td style="width: 25%;"><a href="write_msp_mona.html">write_msp_mona</a></td>
+<td>Export metid database to msp (mona format)</td></tr>
+</table>
+</div></body></html>
