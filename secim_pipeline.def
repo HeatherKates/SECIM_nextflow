@@ -1,0 +1,33 @@
+BootStrap: docker
+From: rocker/r-ver:4.2.3
+
+%post
+    # Install system dependencies
+    apt-get update && apt-get install -y \
+        libxml2-dev libcurl4-openssl-dev libssl-dev pandoc git && \
+        apt-get clean
+
+    # Install R dependencies
+    Rscript -e "install.packages('BiocManager')"
+    Rscript -e "BiocManager::install(version = '3.15')"
+
+    # Install R packages from libraries.txt
+    Rscript -e "pkgs <- scan('/pipeline/libraries.txt', what = 'character', sep = ','); \
+        BiocManager::install(pkgs, force = TRUE, ask = FALSE)"
+
+    # Copy pre-installed R packages
+    cp -r /pipeline/R-packages/metid /usr/local/lib/R/site-library/
+    cp -r /pipeline/R-packages/downloadthis /usr/local/lib/R/site-library/
+    cp -r /pipeline/R-packages/MetaboDiff /usr/local/lib/R/site-library/
+
+%files
+    libraries.txt /pipeline/libraries.txt
+    R/ /pipeline/R/
+    R-packages/ /pipeline/R-packages/
+
+%environment
+    export PATH=/usr/local/lib/R/site-library:$PATH
+
+%runscript
+    exec Rscript "$@"
+
