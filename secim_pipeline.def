@@ -7,9 +7,11 @@ From: rocker/r-ver:4.2.3
         libxml2-dev libcurl4-openssl-dev libssl-dev pandoc git && \
         apt-get clean
 
-    # Install R dependencies
+    # Install BiocManager
     Rscript -e "install.packages('BiocManager')"
-    Rscript -e "BiocManager::install(version = '3.15')"
+
+    # Set Bioconductor version without confirmation
+    Rscript -e "BiocManager::install(version = '3.15', ask = FALSE)"
 
     # Install R packages from libraries.txt
     Rscript -e "pkgs <- scan('/pipeline/libraries.txt', what = 'character', sep = ','); \
@@ -21,9 +23,9 @@ From: rocker/r-ver:4.2.3
     cp -r /pipeline/R-packages/MetaboDiff /usr/local/lib/R/site-library/
 
 %files
-    libraries.txt /pipeline/libraries.txt
+    pipeline/libraries.txt /pipeline/libraries.txt
     R/ /pipeline/R/
-    R-packages/ /pipeline/R-packages/
+    pipeline/R-packages/ /pipeline/R-packages/
 
 %environment
     export PATH=/usr/local/lib/R/site-library:$PATH
